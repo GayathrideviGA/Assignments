@@ -13,6 +13,35 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Color logobg  = Colors.blueGrey;
+  
+  void changeColor(var change){
+    setState(() {
+    switch (change) {
+      case 'violet':
+        logobg = Color(0xff302c9c);
+        break;
+      case 'indigo':
+        logobg = Color(0xff0a2284);
+        break;
+      case 'blue':
+        logobg = Colors.blue;
+        break; 
+      case 'green':
+        logobg = Colors.green;
+        break;
+      case 'yellow':
+        logobg = Colors.yellow;
+        break;
+      case 'orange':
+        logobg = Colors.orange;
+        break;
+      case 'red':
+        logobg = Colors.red;
+        break;
+      default: logobg = Colors.blueGrey;
+    }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     
@@ -54,9 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       FlatButton(
                         color: Color(0xff302c9c),
                         onPressed: () {
-                          setState(() {
-                            logobg = Color(0xff302c9c);
-                          });
+                        changeColor("violet");
                         },
                         child: Center(
                           child: Text(
@@ -68,9 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                        FlatButton(
                         color: Color(0xff0a2284),
                         onPressed: () {
-                          setState(() {
-                            logobg = Color(0xff0a2284);
-                          });
+                          changeColor("indigo");
                         },
                         child: Center(
                           child: Text(
@@ -82,9 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                        FlatButton(
                         color: Colors.blue,
                         onPressed: () {
-                          setState(() {
-                            logobg = Colors.blue;
-                          });
+                         changeColor("blue");
                         },
                         child: Center(
                           child: Text(
@@ -96,9 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       FlatButton(
                         color: Colors.green,
                         onPressed: () {
-                          setState(() {
-                            logobg = Colors.green;
-                          });
+                         changeColor("green");
                         },
                         child: Center(
                           child: Text(
@@ -110,9 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       FlatButton(
                         color: Colors.yellow,
                         onPressed: () {
-                          setState(() {
-                            logobg = Colors.yellow;
-                          });
+                         changeColor("yellow");
                         },
                         child: Center(
                           child: Text(
@@ -124,9 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       FlatButton(
                         color: Colors.orange,
                         onPressed: () {
-                          setState(() {
-                            logobg = Colors.orange;
-                          });
+                          changeColor("orange");
                         },
                         child: Center(
                           child: Text(
@@ -138,9 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       FlatButton(
                         color: Colors.red,
                         onPressed: () {
-                          setState(() {
-                            logobg = Colors.red;
-                          });
+                          changeColor("red");
                         },
                         child: Center(
                           child: Text(
