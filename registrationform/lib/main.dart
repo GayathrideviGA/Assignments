@@ -30,6 +30,18 @@ class _MyHomePageState extends State<MyHomePage>
         backgroundColor: Color(0xffca3a27),
         title: Center(child: Text('Geekyants Academy',style: TextStyle(color: Colors.white),),),
       ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: <Widget>[
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: <Widget>[
+
+             ],
+           ),
+        
+        ],
+      ),
     );
   }
 }
