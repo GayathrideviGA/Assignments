@@ -18,26 +18,16 @@ class MyHomepage extends StatefulWidget {
 }
 
 class MyHomepagestate extends State<MyHomepage> {
-  Text day = Text(
-    'Change to Night Mode',
-    textAlign: TextAlign.center,
-    style: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-  );
-
+ String day = 'Change to Night Mode';
+String night = 'Change to Day Mode';
   Color dayappbg = Colors.yellow[800];
 
   Color dbg = Colors.yellow[700];
 
   AssetImage dayimage = AssetImage('assets/day.png');
 
-  Text daystate = Text(
-    'Good Morning!!!',
-    textAlign: TextAlign.center,
-    style: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-  );
-
+  String daystate = 'Good Morning !!';
+  String nightstate = 'Good Night !!';
   List<bool> isSelected = [true, false];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +35,12 @@ class MyHomepagestate extends State<MyHomepage> {
       appBar: AppBar(
         backgroundColor: dayappbg,
         title: Center(
-          child: day
+          child: Text(
+    day,
+    textAlign: TextAlign.center,
+    style: TextStyle(
+        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+  )
         ),
       ),
       body: Column(
@@ -80,7 +75,7 @@ class MyHomepagestate extends State<MyHomepage> {
                           isSelected[buttonIndex] = !isSelected[buttonIndex];
                           dayappbg = Colors.deepPurple[900];
                           day = Text(
-                            'Change to Day Mode',
+                            night,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 20,
@@ -90,7 +85,7 @@ class MyHomepagestate extends State<MyHomepage> {
                           dayimage = AssetImage('assets/night.png');
                           dbg = Colors.deepPurple[800];
                           daystate = Text(
-                            'Good Night!!!',
+                            nightstate,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 20,
@@ -100,7 +95,7 @@ class MyHomepagestate extends State<MyHomepage> {
                         } else {
                           isSelected[buttonIndex] = false;
                           day = Text(
-    'Change to Night Mode',
+    day,
     textAlign: TextAlign.center,
     style: TextStyle(
         fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
@@ -109,7 +104,7 @@ class MyHomepagestate extends State<MyHomepage> {
                           dayimage = AssetImage('assets/day.png');
                           dbg = Colors.yellow[700];
                           daystate = Text(
-    'Good Morning!!!',
+    daystate,
     textAlign: TextAlign.center,
     style: TextStyle(
         fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
@@ -139,7 +134,12 @@ class MyHomepagestate extends State<MyHomepage> {
               ),
             ],
           ),
-          daystate
+          Text(
+    daystate,
+    textAlign: TextAlign.center,
+    style: TextStyle(
+        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+  )
         ],
       ),
     );
