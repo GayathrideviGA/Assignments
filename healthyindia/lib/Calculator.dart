@@ -318,7 +318,7 @@ class _CalculatorState extends State<Calculator>
                     width: 185,
                     height: 50,
                     decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Color(0xff59c8b5),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           bottomLeft: Radius.circular(5),
@@ -361,7 +361,7 @@ class _CalculatorState extends State<Calculator>
                     width: 300,
                     height: 50,
                     decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Color(0xff59c8b5),
                         borderRadius: BorderRadius.circular(10)),
                     child: Center(
                       child: Text(bmistate,

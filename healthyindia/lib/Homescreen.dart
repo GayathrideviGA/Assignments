@@ -156,8 +156,7 @@ class _HomescreenState extends State<Homescreen> {
             ),
             ListTile(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Heartbeat()));
+                
               },
               leading: Icon(Icons.notifications, color: Colors.blueGrey),
               title: Text(

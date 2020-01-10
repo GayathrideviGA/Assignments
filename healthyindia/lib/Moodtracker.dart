@@ -21,7 +21,13 @@ class _MoodtrackerState extends State<Moodtracker> {
             style: TextStyle(color: Colors.white),
           ),
         ),
-      
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          
+               
+        ],
+      ),
       ),
     );
   }
