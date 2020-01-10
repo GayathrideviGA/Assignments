@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthyindia/Calculator.dart';
+import 'package:healthyindia/Homescreen.dart';
 import 'package:healthyindia/Registration.dart';
 
 class Login extends StatefulWidget {
@@ -120,7 +120,7 @@ class _LoginState extends State<Login> {
                                               onPressed: () {
                                                 if(username.text =='geeky' && password.text == 'geeky'){
                                                    Navigator.push(context, MaterialPageRoute(
-                                                     builder: (context)=>Calculator()
+                                                     builder: (context)=>Homescreen()
                                                    ));
                                                 }
                                                 else{

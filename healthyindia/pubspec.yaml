@@ -25,3 +25,6 @@ flutter:
   assets:
     - assets/logo.png
     - assets/bmi.png
+    - assets/profile.png
+    - assets/health.png
+    - assets/health.jpg

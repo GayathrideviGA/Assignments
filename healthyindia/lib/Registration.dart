@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthyindia/Calculator.dart';
+import 'package:healthyindia/Homescreen.dart';
 
 class Registration extends StatefulWidget {
   @override
@@ -92,7 +92,7 @@ class _RegistrationState extends State<Registration> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Calculator()));
+                                  builder: (context) => Homescreen()));
                         },
                         color: Color(0xff59c8b5),
                         child: Text('Sign Up',
