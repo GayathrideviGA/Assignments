@@ -54,12 +54,16 @@ class _RegistrationState extends State<Registration> {
                               Icon(Icons.account_circle, color: Colors.black)),
                     ),
                     TextField(
+                      
                       autocorrect: true,
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                           hintText: 'Enter your mail id',
                           hintStyle: TextStyle(color: Colors.black),
-                          icon: Icon(Icons.mail, color: Colors.black)),
+                          icon: Icon(Icons.mail, color: Colors.black)
+                          
+                          ),
+
                     ),
                     TextField(
                       autocorrect: true,

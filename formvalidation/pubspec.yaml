@@ -1,7 +1,5 @@
-name: healthyindia
+name: formvalidation
 description: A new Flutter project.
-
-
 version: 1.0.0+1
 
 environment:
@@ -10,22 +8,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-
-
 flutter:
   uses-material-design: true
+
   assets:
-    - assets/logo.png
-    - assets/bmi.png
-    - assets/profile.png
-    - assets/health.png
-    - assets/health.jpg
-    - assets/calorie.png
+    - assets/back.png
+  fonts:
+    - family: Montserrat-Bold
+      fonts:
+      - asset: fonts/Montserrat-Bold.ttf
+    

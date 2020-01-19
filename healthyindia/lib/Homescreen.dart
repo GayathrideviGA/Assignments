@@ -3,6 +3,7 @@ import 'package:healthyindia/Calculator.dart';
 import 'package:healthyindia/Caloriecalculator.dart';
 import 'package:healthyindia/Heartbeat.dart';
 import 'package:healthyindia/Moodtracker.dart';
+import 'package:healthyindia/Notes.dart';
 
 class Homescreen extends StatefulWidget {
   @override
@@ -39,7 +40,7 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Caloriecalci()));
+                    MaterialPageRoute(builder: (context) => Notes()));
                   },
                 ),
                 title: new Text('Notes')),
