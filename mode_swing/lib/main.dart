@@ -18,8 +18,8 @@ class MyHomepage extends StatefulWidget {
 }
 
 class MyHomepagestate extends State<MyHomepage> {
- String day = 'Change to Night Mode';
-String night = 'Change to Day Mode';
+  String day = 'Change to Night Mode';
+  String night = 'Change to Day Mode';
   Color dayappbg = Colors.yellow[800];
 
   Color dbg = Colors.yellow[700];
@@ -29,19 +29,19 @@ String night = 'Change to Day Mode';
   String daystate = 'Good Morning !!';
   String nightstate = 'Good Night !!';
   List<bool> isSelected = [true, false];
+  
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: dbg,
       appBar: AppBar(
         backgroundColor: dayappbg,
         title: Center(
-          child: Text(
-    day,
-    textAlign: TextAlign.center,
-    style: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-  )
-        ),
+            child: Text(
+          day,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+        )),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,72 +49,8 @@ String night = 'Change to Day Mode';
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 10),
-                child: ToggleButtons(
-                  selectedBorderColor: Colors.black,
-                  selectedColor: Colors.brown,
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(50),
-                  borderWidth: 2,
-                  borderColor: Colors.black,
-                  children: <Widget>[
-                    Icon(Icons.wb_sunny),
-                    Icon(
-                      Icons.wb_sunny,
-                      color: Colors.black,
-                    )
-                  ],
-                  isSelected: isSelected,
-                  onPressed: (int index) {
-                    setState(() {
-                      for (int buttonIndex = 0;
-                          buttonIndex < isSelected.length;
-                          buttonIndex++) {
-                        if (buttonIndex == index) {
-                          isSelected[buttonIndex] = !isSelected[buttonIndex];
-                          dayappbg = Colors.deepPurple[900];
-                          day = Text(
-                            night,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          );
-                          dayimage = AssetImage('assets/night.png');
-                          dbg = Colors.deepPurple[800];
-                          daystate = Text(
-                            nightstate,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          );
-                        } else {
-                          isSelected[buttonIndex] = false;
-                          day = Text(
-    day,
-    textAlign: TextAlign.center,
-    style: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-  );
-                          dayappbg = Colors.yellow[800];
-                          dayimage = AssetImage('assets/day.png');
-                          dbg = Colors.yellow[700];
-                          daystate = Text(
-    daystate,
-    textAlign: TextAlign.center,
-    style: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-  );
-                        }
-                      }
-                    });
-                  },
-                ),
-              ),
+            
+                  
             ],
           ),
           Row(
@@ -135,11 +71,11 @@ String night = 'Change to Day Mode';
             ],
           ),
           Text(
-    daystate,
-    textAlign: TextAlign.center,
-    style: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-  )
+            daystate,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+          )
         ],
       ),
     );
