@@ -53,12 +53,29 @@ class MyHomepagestate extends State<MyHomepage> {
              onChanged: 
              (bool value){
                 setState(() {
-                  value=isSelected[1];
-                  day =night;
-                  dayappbg = Colors.deepPurple[800];
-                  dbg = Colors.deepPurple[700];
-                  dayimage = AssetImage('assets/night.png');
-                  daystate =nightstate;
+               for(int buttonindex=0;buttonindex<isSelected.length;buttonindex++)
+               {
+                 if(value==true)
+                 {
+                    isSelected[buttonindex] = !isSelected[buttonindex];
+                     dayappbg = Colors.deepPurple[900];
+                          day = night;
+                          dayimage = AssetImage('assets/night.png');
+                          dbg = Colors.deepPurple[800];
+                          daystate = nightstate;
+                          
+                 }
+                 else
+                 {
+                   isSelected[buttonindex] = false;
+                          day = day;
+                          dayappbg = Colors.yellow[800];
+                          dayimage = AssetImage('assets/day.png');
+                          dbg = Colors.yellow[700];
+                          daystate = daystate;
+                 }
+               }
+                 
                 });
              },)
                   
