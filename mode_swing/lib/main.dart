@@ -49,7 +49,18 @@ class MyHomepagestate extends State<MyHomepage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-            
+             Switch(value: isSelected[1],
+             onChanged: 
+             (bool value){
+                setState(() {
+                  value=isSelected[1];
+                  day =night;
+                  dayappbg = Colors.deepPurple[800];
+                  dbg = Colors.deepPurple[700];
+                  dayimage = AssetImage('assets/night.png');
+                  daystate =nightstate;
+                });
+             },)
                   
             ],
           ),
